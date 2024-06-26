@@ -13,6 +13,6 @@ public class Circle{
 	
 	public void display() {
 		// moon 삭제
-		System.out.println("원의 면적 : " + Math.PI * Math.pow(radius, 2.0)); // radius(반지름)의 제곱 * 3.14
+		// moonbranch 삭제
 	}
 }

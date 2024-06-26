@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id = "per" class = "sample6.PersonImpl">
+		<constructor-arg value = "예슬"/>
+		<constructor-arg value = "31"/>
+		<constructor-arg value = "167"/>
+		<constructor-arg value = "요리하기"/>
+	</bean>
+	
+	<bean id = "stu" class = "sample6.StudentImpl">
+		<property name="kor" value = "90"/>
+		<property name="eng" value = "100"/>
+		<property name="per">
+			<ref bean = "per"/>
+		</property>
+	</bean>
+	
+	<bean id = "my" class = "sample6.MyInfo">
+		<property name="per">
+			<ref bean = "per"/>
+		</property>
+		<property name="stu">
+			<ref bean = "stu"/>
+		</property>
+	</bean> -->
+	
+	<bean id = "per" class = "sample6.PersonImpl" c:name = "예슬" c:age = "31" c:height="167" c:hobby="요리하기"/>
+	<bean id = "stu" class = "sample6.StudentImpl" p:kor = "90" p:eng="100" p:per-ref="per"/>
+	<bean id = "my" class = "sample6.MyInfo" p:per-ref="per" p:stu-ref="stu"/>
+</beans>
